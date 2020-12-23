@@ -19,7 +19,7 @@ import com.jfontes.minhasfinancas.model.entity.Usuario;
 @ActiveProfiles("test")
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
-public class UsuarioRepositoryTeste {
+public class UsuarioRepositoryTest {
 	
 	@Autowired
 	UsuarioRepository repository;

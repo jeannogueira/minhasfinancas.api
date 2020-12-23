@@ -62,7 +62,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 	}
 
 	@Override
-	public void ataulzarStatus(Lancamento lancamento, StatusLancamento status) {
+	public void atualizarStatus(Lancamento lancamento, StatusLancamento status) {
 		lancamento.setStatus(status);
 		atualizar(lancamento);
 		
@@ -72,7 +72,7 @@ public class LancamentoServiceImpl implements LancamentoService {
 	public void validar(Lancamento lancamento) {
 		
 		if(lancamento.getDescricao() == null || lancamento.getDescricao().trim().equals("")) {
-			throw new RegraNegocioException("Informe uma descrição válida.");
+			throw new RegraNegocioException("Informe uma Descrição válida.");
 		}
 		
 		if(lancamento.getMes() == null || lancamento.getMes() < 1 || lancamento.getMes() > 12) {
